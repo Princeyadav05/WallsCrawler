@@ -3,7 +3,7 @@ import requests
 import bs4
 import re
 import os
-
+#making a new dir
 os.makedirs('Wallhaven', exist_ok=True)
 
 print ('''\n\n
