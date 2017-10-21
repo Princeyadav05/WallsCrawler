@@ -9,19 +9,19 @@ os.makedirs('Wallhaven', exist_ok=True)
 print ('''\n\n
     Welcome to the Wallpaper Downloader
     With this Script you can download wallpapers from Wallhaven site''')
-
+#fetching latest wallpapers
 def latest():
     print('''
     Downloading Latest Wallpapers from Wallhaven.''')
     urllatest = 'https://alpha.wallhaven.cc/latest?page='
     return (urllatest, dict())
-
+#fetching top wallpapers
 def top():
     print('''
     Downloading Top Wallpapers from Wallhaven.''')
     urltop = 'https://alpha.wallhaven.cc/toplist?page='
     return (urltop, dict())
-
+#looking for specific wallpapers
 def search():
     keyword = input('\n    Enter the Keyword : ')
     print('''
@@ -29,7 +29,7 @@ def search():
     urlsearch = 'https://alpha.wallhaven.cc/search?q=' + \
                 urllib.parse.quote_plus(keyword) + '&page='
     return (urlsearch, dict())
-
+#script handler
 def main():
     select = str(input('''\n
     Choose how you want to download the image:
